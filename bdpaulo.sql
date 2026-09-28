@@ -78,7 +78,7 @@ CREATE TABLE `tabela_de_produtos` (
 
 CREATE TABLE `tabela_de_vendas` (
   `Codes de venda` int(11) NOT NULL,
-  `Código do cliente` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `código do produto` int(11) NOT NULL,
   `data de venda` datetime NOT NULL,
   `valor total` decimal(10,0) NOT NULL
