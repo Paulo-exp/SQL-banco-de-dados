@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 31/08/2026 às 21:39
+-- Tempo de geração: 28/09/2026 às 20:05
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -70,6 +70,20 @@ CREATE TABLE `tabela_de_produtos` (
   `Data de Fabricação` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `tabela_de_vendas`
+--
+
+CREATE TABLE `tabela_de_vendas` (
+  `Codes de venda` int(11) NOT NULL,
+  `Código do cliente` int(11) NOT NULL,
+  `código do produto` int(11) NOT NULL,
+  `data de venda` datetime NOT NULL,
+  `valor total` decimal(10,0) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 --
 -- Índices para tabelas despejadas
 --
@@ -91,6 +105,12 @@ ALTER TABLE `tabela_de_clientes`
 --
 ALTER TABLE `tabela_de_produtos`
   ADD PRIMARY KEY (`código produto`);
+
+--
+-- Índices de tabela `tabela_de_vendas`
+--
+ALTER TABLE `tabela_de_vendas`
+  ADD PRIMARY KEY (`Codes de venda`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
