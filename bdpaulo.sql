@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 -- Estrutura para tabela `tabela de estoque`
 --
 
-CREATE TABLE `tabela de estoque` (
+CREATE TABLE `tabela_de_estoque` (
   `Código do Estoque` int(20) NOT NULL,
   `código produto` int(11) NOT NULL,
   `Quantidade Disponivel` int(11) NOT NULL,
@@ -91,7 +91,7 @@ CREATE TABLE `tabela_de_vendas` (
 --
 -- Índices de tabela `tabela de estoque`
 --
-ALTER TABLE `tabela de estoque`
+ALTER TABLE `tabela_de_estoque`
   ADD PRIMARY KEY (`Código do Estoque`);
 
 --
